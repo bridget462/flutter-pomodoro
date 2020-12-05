@@ -35,7 +35,7 @@ class FocusTimer extends StatelessWidget {
       autoStart: autoStart,
       isFocusMode: true,
       initialCountDownDuration: Duration(minutes: 25),
-      remainingCircleBackgroundColor: Colors.amber[700],
+      remainingCircleBackgroundColor: Color(0xFFF79D43),
       remainingCircleIndicatorColor: Colors.grey[800],
     );
   }
@@ -47,7 +47,7 @@ class BreakTimer extends StatelessWidget {
     return CountDownTimer(
       isFocusMode: false,
       initialCountDownDuration: Duration(minutes: 5),
-      remainingCircleBackgroundColor: Colors.lightBlue[300],
+      remainingCircleBackgroundColor: Color(0xFF6A96E4),
       remainingCircleIndicatorColor: Colors.grey[800],
     );
   }

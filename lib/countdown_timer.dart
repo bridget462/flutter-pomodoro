@@ -30,6 +30,8 @@ class _CountDownTimerState extends State<CountDownTimer>
   Duration countdownDuration;
   Duration remainingTimeInDuration;
   final player = AudioCache();
+  // TODO make it selectable
+  String ringtone = 'woodblock.mp3';
 
   String get timerString {
     updateRemainingTimeInDuration();
@@ -55,7 +57,7 @@ class _CountDownTimerState extends State<CountDownTimer>
       // print(controller.value);
       updateRemainingTimeInDuration();
       if (controller.value == 0.0) {
-        player.play('Iphone whatsapp.mp3');
+        player.play(ringtone);
         // _showPopUp();
       }
     });
@@ -89,7 +91,7 @@ class _CountDownTimerState extends State<CountDownTimer>
     controller.addListener(() {
       updateRemainingTimeInDuration();
       if (controller.value == 0.0) {
-        player.play('Iphone whatsapp.mp3');
+        player.play(ringtone);
         // _showPopUp();
       }
     });
@@ -130,7 +132,7 @@ class _CountDownTimerState extends State<CountDownTimer>
     controller.addListener(() {
       updateRemainingTimeInDuration();
       if (controller.value == 0.0) {
-        player.play('Iphone whatsapp.mp3');
+        player.play(ringtone);
         // _showPopUp();
       }
     });
@@ -151,7 +153,7 @@ class _CountDownTimerState extends State<CountDownTimer>
   }
 
   void showBreakAlert(BuildContext context) {
-    player.play('Iphone whatsapp.mp3');
+    player.play(ringtone);
     showDialog(
         context: context,
         barrierDismissible: true,
@@ -185,7 +187,7 @@ class _CountDownTimerState extends State<CountDownTimer>
   }
 
   void showLetsWorkAlert(BuildContext context) {
-    player.play('Iphone whatsapp.mp3');
+    player.play(ringtone);
     showDialog(
         context: context,
         barrierDismissible: true,
@@ -350,12 +352,14 @@ class _CountDownTimerState extends State<CountDownTimer>
                       //   onPressed: () {
                       //     print('debug botton pressed.');
                       //     print(timerString);
-                      //     if (widget.isFocusMode) {
-                      //       showBreakAlert(context);
-                      //     } else {
-                      //       // go back to focus screen
-                      //       showLetsWorkAlert(context);
-                      //     }
+                      //     player.play(ringtone);
+
+                      //     // if (widget.isFocusMode) {
+                      //     //   showBreakAlert(context);
+                      //     // } else {
+                      //     //   // go back to focus screen
+                      //     //   showLetsWorkAlert(context);
+                      //     // }
                       //   },
                       //   child: Text('Debug Button'),
                       // ),
